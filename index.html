@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <script src="donut.js"></script>
+    <script defer src="script.js"></script>
+  
+</head>
+
+<body>
+    <div class="container-data-section">
+        <div class="heading">
+            Make a calculated move
+        </div>
+        <div class="text-data">
+            OneInsure’s simple calculators put the power of your decisions in your own hands
+        </div>
+        <div class="term-calculator">Term Calculator</div>
+        <div class="row">
+            <div class="show-change-block">
+                        <div class="text-data-data">Term Insurance Calculator</div>
+                        <div><button class="toggle-block" onclick="showCalculator()"><img src="src\edit.png" /></button></div>
+                    </div>
+            </div>
+        <div class="form-data-with-text row">
+            <div class="col-12 col-md-8 first-section">
+                <div class="row pb-4">
+                    <div class="col-12 col-md-6">
+                        <div class="input-data-calulator">
+                            <div class="text-label-data">Age</div>
+                            <div class="input-tag-image-text">
+                                <img src="src\cake.png">
+                                <input id="Age" type="number" placeholder="Enter">
+                                <div class="text-after-input">Years</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-data-calulator">
+                            <div class="text-label-data">Income</div>
+                            <div class="input-tag-image-text">
+                                <img src="src/heroicons_currency-rupee.png">
+                                <input id="Age" type="number" placeholder="Enter">
+                                <div class="text-after-input">Lakhs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-4">
+                    <div class="col-12 col-md-6">
+                        <div class="input-data-calulator">
+                            <div class="text-label-data">Household Expenses</div>
+                            <div class="input-tag-image-text">
+                                <img src="src/heroicons_currency-rupee.png">
+                                <input id="Age" type="number" placeholder="Enter">
+                                <div class="text-after-input">Lakhs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-data-calulator">
+                            <div class="text-label-data">Loan Amount</div>
+                            <div class="input-tag-image-text">
+                                <img src="src/heroicons_currency-rupee.png">
+                                <input id="Age" type="number" placeholder="Enter">
+                                <div class="text-after-input">Lakhs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-4">
+                    <div class="col-12 col-md-6">
+                        <div class="input-data-calulator">
+                            <div class="text-label-data">Outstanding Period</div>
+                            <div class="input-tag-image-text">
+                                <img src="src\cake.png">
+                                <input id="Age" type="number" placeholder="Enter">
+                                <div class="text-after-input">Years</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kid-section-title pb-4">
+                    Kids Detail
+                </div>
+                <div class="kids-adding-data-occurance">
+                    <div class="row pb-4  kid-section-detail">
+                        <div class="col-12 col-md-6">
+                            <div class="input-data-calulator">
+                                <div class="text-label-data">Kid’s Age</div>
+                                <div class="input-tag-image-text">
+                                    <img src="src\cake.png">
+                                    <input id="Age" type="number" placeholder="Enter">
+                                    <div class="text-after-input">Years</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="input-data-calulator">
+                                <div class="text-label-data">Kid’s Current Education Expense</div>
+                                <div class="input-tag-image-text">
+                                    <img src="src/heroicons_currency-rupee.png">
+                                    <input id="Age" type="number" placeholder="Enter">
+                                    <div class="text-after-input">Lakhs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="data-add-on">
+                    <div class="add-kid-section mb-5"><button class="add-to-form" onclick="addKids()">+</button></div>
+                    <div class="remove-kid-section mb-5"><button class="remove-to-form"
+                            onclick="removeKids()">-</button></div>
+                </div>
+                <div class="main-button-data row pb-5">
+                    <button id="calculate-load">Calculate</button>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-4 second-section-data">
+                <div class="second-part-container">
+                    <div class="second-title-data pb-4">Distribution</div>
+                    <div class="pie-chart-data pb-4 text-center mt-5 mb-5">
+                        <!-- <img src="src\Group 1000000981.png" width="215px" height="215px" /> -->
+                        <div id="example"></div>
+                    </div>
+                    <div class="data-value-loan d-flex justify-content-between pb-2 align-items-center">
+                        <div class="loan-text-image d-flex align-items-baseline">
+                            <div class="cyan-color"></div>
+                            <div class="text-loan">Kid Education</div>
+                        </div>
+                        <div class="price-loan">₹ 0</div>
+                    </div>
+                    <div class="data-value-loan d-flex justify-content-between pb-2 align-items-center">
+                        <div class="loan-text-image d-flex align-items-baseline">
+                            <div class="yellow-color"></div>
+                            <div class="text-loan">Loan</div>
+                        </div>
+                        <div class="price-loan">₹ 0</div>
+                    </div>
+                    <div class="data-value-loan d-flex justify-content-between pb-2 align-items-center">
+                        <div class="loan-text-image d-flex align-items-baseline">
+                            <div class="blue-color"></div>
+                            <div class="text-loan">Household</div>
+                        </div>
+                        <div class="price-loan">₹ 0</div>
+                    </div>
+                    <div class="line-data-slick"></div>
+                    <div class="text-inside-it pt-4 pb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim ipsum vel est
+                        ultricies, ac cursus odio scelerisque.
+                    </div>
+                    <button class="learn-more-button" onclick="displayBlock()">Get Details</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="Details-component-part row">
+            <div class="name-with-text">
+                <div class="name pb-4">
+                    Hi Abhishek!
+                </div>
+                <div class="component-text">Your ideal term insurance cover is 5.5 crore. Further divided into 3 plans
+                    given below </div>
+            </div>
+            <div class="cards-data-container pt-4">
+                <div class="row">
+                    <div class="col-12 col-md-4 ">
+                        <div class="cards-outer-cover">
+                            <div class="card-outer text-center">
+                                <img src="src\Ellipse 1211.png">
+                                <div class="small-text-head">Loan Cover of</div>
+                                <div class="big-head-text">1 Cr for 10 Yrs</div>
+                                <div class="desc-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                                <button class="plan-button">Compare Plans</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 ">
+                        <div class="cards-outer-cover">
+                            <div class="card-outer text-center">
+                                <img src="src\Ellipse 1211.png">
+                                <div class="small-text-head">Loan Cover of</div>
+                                <div class="big-head-text">1 Cr for 10 Yrs</div>
+                                <div class="desc-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                                <button class="plan-button">Compare Plans</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 ">
+                        <div class="cards-outer-cover">
+                            <div class="card-outer text-center">
+                                <img src="src\Ellipse 1211.png">
+                                <div class="small-text-head">Loan Cover of</div>
+                                <div class="big-head-text">1 Cr for 10 Yrs</div>
+                                <div class="desc-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                                <button class="plan-button">Compare Plans</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-last-button-container">
+                <button class="call-the-advisor mb-4 mt-4">Book an Advisory Call</button>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
